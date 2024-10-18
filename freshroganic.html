@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Delivery</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .innerfd {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .innnerptag {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        .innerbutton {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .innerbutton:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .navbar-custom {
+    background-color: #00A36C;
+    height: 150px;
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+    color: white !important;
+    font-size: 20px;
+}
+.navbar-custom .btn-outline-light {
+    border-color: white;
+    color: green;
+}
+.navbar-custom .btn-outline-light:hover {
+    background-color: white;
+    color: #226887;
+}
+.nav-link {
+    font-weight: bold;
+}
+.btn-custom-green {
+    background-color: #FFA600;
+    border-color: #FFA600;
+    color: white;
+}
+.btn-custom-green:hover {
+    background-color: #EE9A4D;
+    border-color: #EE9A4D;
+}
+.btn-primary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.btn-primary .bi-cart,
+.btn-secondary .bi-person-circle {
+    color: white !important;
+}
+.btn-secondary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.navbar-custom {
+    background-color: #00A36C !important;
+    height: 150px !important;
+}
+.navbar-custom {
+    background-color: #00A36C;
+    height: 150px;
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+    color: white !important;
+    font-size: 20px;
+}
+.navbar-custom .btn-outline-light {
+    border-color: white;
+    color: green;
+}
+.navbar-custom .btn-outline-light:hover {
+    background-color: white;
+    color: #226887;
+}
+.nav-link {
+    font-weight: bold;
+}
+.btn-custom-green {
+    background-color: #FFA600;
+    border-color: #FFA600;
+    color: white;
+}
+.btn-custom-green:hover {
+    background-color: #EE9A4D;
+    border-color: #EE9A4D;
+}
+.btn-primary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.btn-primary .bi-cart,
+.btn-secondary .bi-person-circle {
+    color: white !important;
+}
+.btn-secondary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.navbar-custom {
+    background-color: #00A36C !important;
+    height: 150px !important;
+}
+ /* Card styling */
+ .card {
+            margin-bottom: 30px; /* Space between cards */
+            border: 2px solid #FFA600; /* Card border color */
+            border-radius: 10px; /* Rounded corners */
+            height: 100%; /* Ensure card takes full height */
+        }
+        .card-img-top {
+            height: 300px; /* Set fixed height for images */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+        .btn-custom-green {
+            background-color: #FFA600; /* Custom button color */
+            border: none; /* Remove border */
+        }
+        .btn-custom-green:hover {
+            background-color: #EE9A4D; /* Hover color */
+        }
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .innerfd {
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .innnerptag {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        .innerbutton {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .innerbutton:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo2.png" alt="Bootstrap" width="100" height="100" style="background-color: #00A36C;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 130px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="features.html">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reviews.html">Review</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+      </ul>
+
+      <form class="d-flex ms-auto" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:250px;">
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-custom-green">Search</button>
+        &nbsp;&nbsp;&nbsp;
+        <a href="mycart.html">
+            <button type="button" class="btn btn-primary"> <i class="bi bi-cart"></i></button>
+        </a>
+       
+        &nbsp;&nbsp;&nbsp;
+        <a href="login.html" class="btn btn-secondary" role="button">
+          <i class="bi bi-person-circle"></i>
+        </a>
+      </form>
+    </div>
+  </nav>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Fresh and Organic</h1>
+                <p>Fresh and organic produce is often richer in nutrients compared to conventionally grown produce. It can provide essential vitamins, minerals, and antioxidants that are crucial for maintaining good health.</p>
+                <p>Organic farming practices are designed to be more sustainable and environmentally friendly. They often use fewer pesticides and fertilizers, which can help reduce pollution and conserve water and soil quality.</p>
+                <p>Many people find that fresh and organic produce tastes better and has a higher quality compared to non-organic options. This can enhance your overall eating experience.</p>
+                <p>Buying organic produce often supports local farmers and small businesses, contributing to the local economy and promoting sustainable agricultural practices.</p>
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+   <!-- Footer -->
+<footer class="text-center text-lg-start  text-white mt-5"  style="background-color: #00A36C;">
+    <!-- Section: Links  -->
+    <div class="container p-4 " style="background-color: #00A36C;"> <!-- Added bg-success here -->
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Company</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-white">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Press</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Customer Service</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="#!" class="text-white">Help & Support</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">Shipping & Returns</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="text-white">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <p class="text-white">Email: support@grocerystore.com</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Phone: (123) 456-7890</p>
+                    </li>
+                    <li>
+                        <p class="text-white">Address: 123 Grocery Lane, City, State</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <a href="https://facebook.com" class="btn btn-primary btn-lg m-2">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com" class="btn btn-info btn-lg m-2">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://instagram.com" class="btn btn-danger btn-lg m-2">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" class="btn btn-primary btn-lg m-2">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 " style="background-color:#00A36C">
+        © 2024 Grocery Store. All Rights Reserved.
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

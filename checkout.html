@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Food Mart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-body">
+
+<header class="bg-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 id="brand-name" class="text-success">Online Grocery Store</h1>
+        <nav>
+            <a href="index.html" class="text-muted me-4">Home</a>
+            <a href="products.html" class="text-muted me-4">Products</a>
+            <a href="categories.html" class="text-muted me-4">Categories</a>
+            <a href="login.html" id="login-link" class="text-muted">Login</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container my-5" id="checkout-container">
+    <h2 class="text-center mb-4" id="checkout-title">Checkout</h2>
+
+    <div class="mb-4">
+        <h4>Subtotal</h4>
+        <p id="subtotal-text" class="fw-bold">Subtotal: ₹867.00</p>
+    </div>
+
+    <div class="mb-4">
+        <form id="address-form" onclick="return checkoutform()">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name "><br>
+                <span id="name-error" class="errorform"></span>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter your address "><br>
+                <span id="address-error" class="errorform"></span>
+
+            </div>
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city"><br>
+                <span id="city-error" class="errorform"></span>
+
+            </div>
+            <div class="mb-3">
+                <label for="postal-code" class="form-label">Pin Code</label>
+                <input type="text" class="form-control" id="postal-code" placeholder="Enter your pin code"><br>
+                <span id="pincode-error" class="errorform"></span>
+
+            </div>
+            <button type="submit" class="btn btn-warning btn-lg">Place Order</button>
+        </form>
+    </div>
+
+    <div id="delivery-message" class="mt-4 text-center" style="display: none;">
+        <h4>Your order will be delivered soon!</h4>
+    </div>
+
+    <div id="thank-you-message" class="mt-4 text-center" style="display: none;">
+        <h4>Thank you for shopping with us!</h4>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Wait until DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    const addressForm = document.getElementById('address-form');
+    const deliveryMessage = document.getElementById('delivery-message');
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    addressForm.addEventListener('submit', function (event) {
+        event.preventDefault();  // Prevent the default form submission
+
+        // Display the delivery and thank you messages
+        deliveryMessage.style.display = 'block';
+        thankYouMessage.style.display = 'block';
+
+        // Optional: Hide the address form after submission
+        addressForm.style.display = 'none';
+    });
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

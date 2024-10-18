@@ -1,0 +1,584 @@
+
+<!doctype html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title> Online Grocery Store</title> 
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css" >
+   <style>
+    .navbar-custom {
+    background-color: #00A36C;
+    height: 150px;
+}
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .dropdown-toggle {
+    color: white !important;
+    font-size: 20px;
+}
+.navbar-custom .btn-outline-light {
+    border-color: white;
+    color: green;
+}
+.navbar-custom .btn-outline-light:hover {
+    background-color: white;
+    color: #226887;
+}
+.nav-link {
+    font-weight: bold;
+}
+.btn-custom-green {
+    background-color: #FFA600;
+    border-color: #FFA600;
+    color: white;
+}
+.btn-custom-green:hover {
+    background-color: #EE9A4D;
+    border-color: #EE9A4D;
+}
+.btn-primary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.btn-primary .bi-cart,
+.btn-secondary .bi-person-circle {
+    color: white !important;
+}
+.btn-secondary {
+    background-color: #FFA600;
+    border-color: #FFA600;
+}
+.card {
+    margin-bottom: 30px;
+    border: 2px solid #FFA600;
+    height: 300px;
+}
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    color: #EE9A4D;
+}  
+.product-card {
+            height: 400px;
+        }
+
+        .product-card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .footer-custom {
+            background-color: #00A36C;
+        }
+
+        .btn-custom-green {
+            background-color: #00A36C;
+            color: white;
+        }
+
+        .btn-custom-green:hover {
+            background-color: #008054;
+            color: white;
+        }
+        .shadow-text {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-background {
+            background: linear-gradient(90deg, rgba(255, 165, 0, 0.8), rgba(0, 163, 108, 0.8));
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+   </style>
+
+</head> 
+<body class="bodyclass">
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <!-- Main Navbar Section -->
+        <a class="navbar-brand" href="#">
+            <img src="images/logo2.png" alt="Bootstrap" width="100" height="100" style="background-color: #00A36C;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html" style="margin-left: 130px;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="features.html">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+            </ul>
+
+            <form class="d-flex ms-auto" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    style="width:250px;">&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-custom-green">Search</button>&nbsp;&nbsp;&nbsp;
+                <a href="mycart.html">
+                    <button type="button" class="btn btn-primary"> <i class="bi bi-cart"></i></button>
+                </a>
+               &nbsp;&nbsp;&nbsp;
+                <a href="login.html" class="btn btn-secondary" role="button">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav><br><br><br>
+
+
+
+
+
+
+
+<div class="container mt-5">
+    <div class="header-background text-center">
+        <h1 class="text-white shadow-text" style="font-size: 3rem; font-weight: bold;" >Our Products</h1>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="text-center mb-4" id="vegeproduct" style="color: #00A36C;">Fresh Vegetables</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/tomatos2.jpg" class="card-img-top" alt="Fresh Vegetables">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Tomatoes</h5>
+                    <p class="card-text">1 Kg - ₹88.50</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/onions2.jpeg" class="card-img-top" alt="Fresh Fruits">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Onions</h5>
+                    <p class="card-text">500 g - ₹10.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/potatos2.jpeg" class="card-img-top" alt="Dairy Products">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fresh Potatoes</h5>
+                    <p class="card-text">1 Kg - ₹57.26 </p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/cabbages1.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">fresh Cabbage</h5>
+                    <p class="card-text">1 Pc. - ₹20.05</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/carrotproduct.webp" class="card-img-top" alt="Snacks">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Carrots</h5>
+                    <p class="card-text">>1 Kg - ₹60.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/coriender.webp" class="card-img-top" alt="Beverages">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Corianders Leaves</h5>
+                    <p class="card-text">500 g - ₹17.07</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/beetroot.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Beetroot</h5>
+                    <p class="card-text">1 Kg - ₹40.26</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/drumstick.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Drumsticks/Moringa</h5>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/ginger.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ginger(Fresh)</h5>
+                    <p class="card-text">100 g - ₹18.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br><br>
+
+
+
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"  id="fruitsproducts" style="color: #00A36C;">Fresh and Juicy Fruits</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/p1.webp" class="card-img-top" alt="Fresh Vegetables">
+                <div class="card-body text-center">
+                    <h5 class="card-title">>Banana - Robusta</h5>
+                    <p class="card-text">1 Kg - ₹52</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/kiwis1.webp" class="card-img-top" alt="Fresh Fruits">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kiwi</h5>
+                    <p class="card-text">3 Pcs - ₹100 .00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/mangos1.webp" class="card-img-top" alt="Dairy Products">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dasheri Mango</h5>
+                    <p class="card-text">1 Kg - ₹96.88</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/guava.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Guava</h5>
+                    <p class="card-text">500 g - ₹35.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/mosambi.webp" class="card-img-top" alt="Snacks">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mosambi</h5>
+                    <p class="card-text">1 Kg - ₹8\7.75</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/papaya.webp" class="card-img-top" alt="Beverages">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Papaya</h5>
+                    <p class="card-text">1 Kg - ₹64.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/watermelon.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Water Melon</h5>
+                    <p class="card-text">1 Pc - ₹63.51</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/coconut.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">coconut</h5>
+                    <p class="card-text">500 g - ₹44.76</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/rowmango.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Row Mango</h5>
+                    <p class="card-text">1 Kg - ₹135.34</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br><br><br>
+
+
+
+
+
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4" id="dairyproducts" style="color: #00A36C;">Creamy Dairy Products</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/milks1.avif" class="card-img-top" alt="Fresh Vegetables">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Full Cream Milk</h5>
+                    <p class="card-text">500 ml - ₹34.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/butters1.jpeg" class="card-img-top" alt="Fresh Fruits">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cooking Butter-Unsalted</h5>
+                    <p class="card-text">500 g - ₹295</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/paneers1.jpg" class="card-img-top" alt="Dairy Products">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fresh Paneer</h5>
+                    <p class="card-text">100 g - ₹45.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/curds1.jpg" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Flavoured Curd</h5>
+                    <p class="card-text">75 g - ₹10.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/cheese.jpeg" class="card-img-top" alt="Snacks">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cheese</h5>
+                    <p class="card-text">1 Kg - ₹520.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/cream.jpeg" class="card-img-top" alt="Beverages">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fresh Cream</h5>
+                    <p class="card-text">1 L - ₹220.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/sourcream.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Sour Cream</h5>
+                    <p class="card-text">150 g - ₹200.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/magnum.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Magnum Ice Cream</h5>
+                    <p class="card-text">70 g - ₹70.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+                <img src="images/soymilk.webp" class="card-img-top" alt="Bakery Items">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Soy Milk</h5>
+                    <p class="card-text">1 L - ₹145.00</p>
+                    <a href="mycart.html" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-success text-white mt-5">
+    <!-- Section: Links  -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Company</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Careers</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Press</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Customer Service</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Help & Support</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Shipping & Returns</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contact</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <p class="text-white">Email: support@grocerystore.com</p>
+            </li>
+            <li>
+              <p class="text-white">Phone: (123) 456-7890</p>
+            </li>
+            <li>
+              <p class="text-white">Address: 123 Grocery Lane, City, State</p>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Follow Us</h5>
+            <a href="https://facebook.com" class="btn btn-primary btn-lg m-2">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com" class="btn btn-info btn-lg m-2">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://instagram.com" class="btn btn-danger btn-lg m-2">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" class="btn btn-primary btn-lg m-2">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Grocery Store. All Rights Reserved.
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+</body>
+</html>

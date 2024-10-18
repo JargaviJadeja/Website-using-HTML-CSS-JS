@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Food Mart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mycart.css">
+</head>
+<body>
+
+<header class="bg-light py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 id="brand-name" class="text-success">Online Grocery Store</h1>
+        <nav>
+            <a href="index.html" class="text-muted me-4">Home</a>
+            <a href="products.html" class="text-muted me-4">Products</a>
+            <a href="categories.html" class="text-muted me-4">Categories</a>
+            <a href="login.html" id="login-link" class="text-muted">Login</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container my-5" id="cart-container">
+    <h2 class="text-center mb-5" id="cart-title">MY CART</h2>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product 1: Dasheri Mangoes -->
+            <tr id="item-watermelon">
+                <td class="d-flex align-items-center">
+                    <span class="ms-3 fw-bold">Dasheri Mangoes</span>
+                </td>
+                <td>
+                    <div class="input-group" id="qty-watermelon">
+                        <button class="btn btn-outline-secondary" type="button" id="decrease-watermelon">-</button>
+                        <input type="text" class="form-control text-center qty-input" value="1" id="amount-watermelon" data-price="50">
+                        <button class="btn btn-outline-secondary" type="button" id="increase-watermelon">+</button>
+                    </div>
+                </td>
+                <td class="fw-bold price" id="price-watermelon">₹96.88</td>
+                <td><button class="btn btn-danger remove-btn" id="remove-watermelon">✖</button></td>
+            </tr>
+
+            <!-- Product 2: Tomato -->
+            <tr id="item-tomato">
+                <td class="d-flex align-items-center">
+                    <span class="ms-3 fw-bold">Tomatoes</span>
+                </td>
+                <td>
+                    <div class="input-group" id="qty-tomato">
+                        <button class="btn btn-outline-secondary" type="button" id="decrease-tomato">-</button>
+                        <input type="text" class="form-control text-center qty-input" value="1" id="amount-tomato" data-price="88.50">
+                        <button class="btn btn-outline-secondary" type="button" id="increase-tomato">+</button>
+                    </div>
+                </td>
+                <td class="fw-bold price" id="price-tomato">₹88.50</td>
+                <td><button class="btn btn-danger remove-btn" id="remove-tomato">✖</button></td>
+            </tr>
+
+            <!-- Product 3: Cabbage -->
+            <tr id="item-cucumber">
+                <td class="d-flex align-items-center">
+                    <span class="ms-3 fw-bold">Cabbage</span>
+                </td>
+                <td>
+                    <div class="input-group" id="qty-cucumber">
+                        <button class="btn btn-outline-secondary" type="button" id="decrease-cucumber">-</button>
+                        <input type="text" class="form-control text-center qty-input" value="1" id="amount-cucumber" data-price="45">
+                        <button class="btn btn-outline-secondary" type="button" id="increase-cucumber">+</button>
+                    </div>
+                </td>
+                <td class="fw-bold price" id="price-cucumber">₹20.05</td>
+                <td><button class="btn btn-danger remove-btn" id="remove-cucumber">✖</button></td>
+            </tr>
+
+            <!-- Product 4: Fresh cream -->
+            <tr id="item-spinach">
+                <td class="d-flex align-items-center">
+                    <span class="ms-3 fw-bold">Fresh Cream</span>
+                </td>
+                <td>
+                    <div class="input-group" id="qty-spinach">
+                        <button class="btn btn-outline-secondary" type="button" id="decrease-spinach">-</button>
+                        <input type="text" class="form-control text-center qty-input" value="1" id="amount-spinach" data-price="100">
+                        <button class="btn btn-outline-secondary" type="button" id="increase-spinach">+</button>
+                    </div>
+                </td>
+                <td class="fw-bold price" id="price-spinach">₹220.00</td>
+                <td><button class="btn btn-danger remove-btn" id="remove-spinach">✖</button></td>
+            </tr>
+
+            <!-- Product 5: Betroot -->
+            <tr id="item-macadamia">
+                <td class="d-flex align-items-center">
+                    <span class="ms-3 fw-bold">Betroot</span>
+                </td>
+                <td>
+                    <div class="input-group" id="qty-macadamia">
+                        <button class="btn btn-outline-secondary" type="button" id="decrease-macadamia">-</button>
+                        <input type="text" class="form-control text-center qty-input" value="1" id="amount-macadamia" data-price="150">
+                        <button class="btn btn-outline-secondary" type="button" id="increase-macadamia">+</button>
+                    </div>
+                </td>
+                <td class="fw-bold price" id="price-macadamia">₹40.26</td>
+                <td><button class="btn btn-danger remove-btn" id="remove-macadamia">✖</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between align-items-center mt-4" id="subtotal-section">
+        <a href="index.html" id="back-to-shopping" class="text-decoration-none text-secondary">← Back to Shopping</a>
+        <span id="subtotal-text" class="fw-bold">Subtotal: ₹867.00</span>
+        <a href="checkout.html" class="btn btn-warning btn-lg" id="checkout-btn">Checkout</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Wait until DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    updateSubtotal();  // Initial subtotal calculation
+
+    // Event listeners for quantity buttons and remove buttons
+    document.querySelectorAll('.input-group button').forEach(button => {
+        button.addEventListener('click', updateQuantity);
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', removeItem);
+    });
+
+    document.querySelectorAll('.qty-input').forEach(input => {
+        input.addEventListener('input', validateQuantity);
+    });
+
+    // Update quantity and price
+    function updateQuantity(event) {
+        const button = event.target;
+        const input = button.closest('.input-group').querySelector('.qty-input');
+        const priceElement = button.closest('tr').querySelector('.price');
+        let quantity = parseInt(input.value);
+        const pricePerItem = parseFloat(input.getAttribute('data-price'));  // Using the price attribute
+
+        if (button.id.startsWith('increase')) {
+            quantity++;
+        } else if (button.id.startsWith('decrease') && quantity > 1) {
+            quantity--;
+        }
+
+        input.value = quantity;
+        priceElement.textContent = `₹${(quantity * pricePerItem).toFixed(2)}`;  // Update with ₹ symbol
+        updateSubtotal();
+    }
+
+    // Remove item from cart
+    function removeItem(event) {
+        const button = event.target;
+        button.closest('tr').remove();
+        updateSubtotal();
+    }
+
+    // Validate quantity input
+    function validateQuantity(event) {
+        const input = event.target;
+        let value = parseInt(input.value);
+
+        if (isNaN(value) || value < 1) {
+            input.value = 1;
+        }
+        const pricePerItem = parseFloat(input.getAttribute('data-price'));
+        const priceElement = input.closest('tr').querySelector('.price');
+        priceElement.textContent = `₹${(input.value * pricePerItem).toFixed(2)}`;  // Update with ₹ symbol
+
+        updateSubtotal();
+    }
+
+    // Update subtotal based on cart items
+    function updateSubtotal() {
+        let subtotal = 0;
+
+        document.querySelectorAll('.qty-input').forEach(input => {
+            const quantity = parseInt(input.value);
+            const pricePerItem = parseFloat(input.getAttribute('data-price'));
+            subtotal += quantity * pricePerItem;
+        });
+
+        document.getElementById('subtotal-text').textContent = `Subtotal: ₹${subtotal.toFixed(2)}`;  // Update with ₹ symbol
+    }
+});
+
+</script>
+</body>
+</html>
